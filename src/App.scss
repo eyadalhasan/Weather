@@ -1,28 +1,109 @@
+$navbar-color: #759eda;
+$button-color: #5879c7;
+$weather-backgroundColor: #9ccef4;
+
+
 .app {
   height: 100vh;
   width: 100vw;
   transition: background-color 1s ease-in;
 }
 
-.app__header,
-.app__main {
-  width: 100%;
+
+.Navbar {
+  background-color: $navbar-color;
+  height: 10vh;
+  font-size: larger;
   display: flex;
-  flex-direction: column;
+  text-align: center;
   align-items: center;
-  padding: 20px;
-  font-family: 'Raleway', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  input {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: transparent;
+    color: white;
+    outline: 0px;
+    border: 0px;
+
+    &:focus {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  button {
+
+    margin-left: 20px;
+    background-color: $button-color;
+    border: 0px;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.weather {
+min-height: 90vh;
+  background-color: $weather-backgroundColor;
+  text-align: center;
+
+}
+
+.weather__today img {
+  width: 300px;
+  height: 200px;
+
+}
+
+.weather__today p:nth-child(n) {
+  color: white;
+  font-size: large;
+}
+
+.weather__today>span {
+  color: #0d1053
+}
+
+.weather__today span>span {
+  font-weight: bolder;
+  color: #0d1053
+}
+
+.WeatherOver24Hour {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.WeatherOver24Hour div {
+  margin-left: 20px;
+  margin-bottom: 20px;
+
 }
 
 
-/*  Search bar */
-
-
-
-/* Current weather */
-
-
-
-/* Future weather */
+.details {
+  color: #364754;
+  font-weight: 630;
+}
+@media(max-width:600px){
+  .weather{
+ 
+   min-height: 90vh;
+   
+  }
+  .details{
+    font-size: larger;
+  }
+    .WeatherOver24Hour {
+      display: grid;
+      grid-template-columns: auto auto;
+      
+      margin-top: 10vh;
+      img{
+        width: 200px;
+        
+      }
+    }
+    
+  }
