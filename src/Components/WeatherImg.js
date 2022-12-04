@@ -34,11 +34,12 @@ function WeatherImg(props) {
         img.push(<img src={mostlycloudy} alt="" key={1} />)
        
     return (
-
-        <div className="col-1 details" >
-            {(props.index) * 3 < 9 ? "0" + (props.index) * 3 + ":00" : props.index * 3 + ":00"}
+<div className="cont">
+        <div className="details" >
+            {(props.index) * 3 < 9 ? <p>{"0" + (props.index) * 3 + ":00"}</p> : <p>{props.index * 3 + ":00"}</p>}
             {img}
-            <span>{props.item?.main?.temp_min}&deg;C</span>
+            <p>{props.item?.main?.temp_min}&deg;C</p>
+        </div>
         </div>
     )
 

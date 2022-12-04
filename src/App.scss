@@ -69,23 +69,37 @@ min-height: 90vh;
 }
 
 .WeatherOver24Hour {
-  text-align: center;
-  display: flex;
-  justify-content: center;
+
+  display: grid;
+ grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+ 
   margin-top: 10vh;
 }
+
+
 
 .WeatherOver24Hour div {
   margin-left: 20px;
   margin-bottom: 20px;
 
 }
+.WeatherOver24Hour img{
+  width: 100px;
+  height: 100px;
+ 
+}
 
 
 .details {
   color: #364754;
   font-weight: 630;
+ 
+  width: max-content;
 }
+.cont{
+  display: flex;
+}
+
 @media(max-width:600px){
   .weather{
  
@@ -95,15 +109,6 @@ min-height: 90vh;
   .details{
     font-size: larger;
   }
-    .WeatherOver24Hour {
-      display: grid;
-      grid-template-columns: auto auto;
-      
-      margin-top: 10vh;
-      img{
-        width: 200px;
-        
-      }
-    }
+
     
   }
